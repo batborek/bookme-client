@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { UserContext } from "../data/context";
 import Login from "./Login";
 import { Rooms } from "./Rooms";
+import SignUp from "./SignUp";
 
 
 export const AllPages = () => {
@@ -14,8 +15,9 @@ export const AllPages = () => {
         <>
         <form className="myForm">
             <div>
-                {currentPage === 1 && <Login />}
+                {currentPage === 1 && <SignUp />}
                 {currentPage === 2 && <Rooms />}
+                {currentPage === 3 && <Login />}
             </div>
         </form>
         </>

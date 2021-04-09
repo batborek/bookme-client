@@ -1,41 +1,42 @@
 import React, { useContext } from "react";
 import { UserContext } from "../data/context";
 
-export const Login = () => {
-  const {
-    successLogin,
-    setSuccessLogin,
-    GetToken,
-    setCurrentPage,
-    email,
-    setEmail,
-    setPassword,
-    password,
-    token,
-  } = useContext(UserContext);
+
+
+export const SignUp = () => {
 
   return (
     <>
       <div className="myForm">
         <div className="item">
           {/* <h2>{t("Login.2")}</h2> */}
+         
           <input
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
+           // onChange={(e) => setEmail(e.target.value)}
+        //    value={email}
             type="text"
             id="email"
             name="email"
             className="text-input"
             placeholder="email"
           />
+           <input
+           // onChange={(e) => setEmail(e.target.value)}
+        //    value={email}
+            type="text"
+            id="name"
+            name="name"
+            className="text-input"
+            placeholder="Full name"
+          />
 
           <div className="passShow"></div>
           <input
-            onChange={(e) => setPassword(e.target.value)}
+          //  onChange={(e) => setPassword(e.target.value)}
             type="password"
             id="password"
             name="password"
-            value={password}
+           // value={password}
             // onKeyUp={validatePassword}
             className="password-input"
             placeholder="password"
@@ -45,16 +46,15 @@ export const Login = () => {
             type="button"
             className="forwardButton"
             disabled={false}
-            onClick={() => {
-              GetToken();
-            }}
+            // onClick={() => {
+            //   GetToken();
+            // }}
           >
-            <b>Login</b>
+            <b>Sign Up</b>
           </button>
           <h3>
-            Dont have an account? <br />
-            <button>
-              onClick={() => {setCurrentPage(5)}}</button>
+            Do you have an account? <br />
+            Log in
           </h3>
         </div>
       </div>
@@ -62,4 +62,4 @@ export const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;
